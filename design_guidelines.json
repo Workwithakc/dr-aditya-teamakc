@@ -1,0 +1,10 @@
+{
+  "source": "Implementation of user-provided editorial design guidelines; no separate design agent required",
+  "concept": "A little life. A lifetime of care.",
+  "colors": {"ivory":"#fcf8f4","cocoa":"#44352f","blush":"#f5e5e1","rose":"#a76e62","gold":"#c5a76f","sage":"#7d8774"},
+  "typography": {"display":"Cormorant Garamond", "body":"Manrope"},
+  "layout": "Asymmetric editorial hero, large serif headlines, photographic arch, thin dividers, numbered sections, spacious restrained service layouts, warm rose/cocoa contrast",
+  "motion": "Framer Motion masked hero lines, one subtle hero parallax, viewport reveals, Lenis momentum scroll, one slow marquee, reduced-motion alternatives",
+  "imagery": "Actual sourced portrait of Dr Aditya from Ova Care; Unsplash maternity and mother/baby photographs are illustrative, not patient imagery",
+  "restrictions": "No invented outcomes, ratings, clinic addresses, opening hours, or functional integrations. Keep the project frontend only."
+}
