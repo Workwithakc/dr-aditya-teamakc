@@ -13,6 +13,8 @@ import Resources from './pages/Resources';
 import Locations from './pages/Locations';
 import Contact from './pages/Contact';
 import { services } from './data/practice';
+import Preloader from './components/Preloader';
+import PageTransition from './components/PageTransition';
 import './App.css';
 import './pages.css';
 
@@ -31,6 +33,27 @@ function Site() {
     const description = document.querySelector('meta[name="description"]');
     if (description) description.content = `${pageTitles[pathname] || 'Specialist care'} — Dr Aditya Nimbkar. Personalised fetal medicine, fertility, pregnancy and gynaecology care. Enquire about a consultation in Thane, Mulund or Kalyan.`;
   }, [pathname]);
-  return <AppointmentProvider><Header /><main id="main" tabIndex={-1} key={pathname} data-testid="main-content"><Routes><Route path="/" element={<Home />} /><Route path="/about" element={<About />} />{services.map(s => <Route key={s.id} path={`/${s.id}`} element={<Service serviceId={s.id} />} />)}<Route path="/patient-stories" element={<Stories />} /><Route path="/resources" element={<Resources />} /><Route path="/locations" element={<Locations />} /><Route path="/contact" element={<Contact />} /><Route path="*" element={<Navigate to="/" replace />} /></Routes>{pathname !== '/contact' && <FinalCta />}</main><Footer /><Toaster position="bottom-center" /></AppointmentProvider>;
+  return (
+    <AppointmentProvider>
+      <Preloader />
+      <PageTransition />
+      <Header />
+      <main id="main" tabIndex={-1} key={pathname} data-testid="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          {services.map(s => <Route key={s.id} path={`/${s.id}`} element={<Service serviceId={s.id} />} />)}
+          <Route path="/patient-stories" element={<Stories />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/locations" element={<Locations />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+        {pathname !== '/contact' && <FinalCta />}
+      </main>
+      <Footer />
+      <Toaster position="bottom-center" />
+    </AppointmentProvider>
+  );
 }
 export default function App() { return <BrowserRouter><MotionConfig reducedMotion="user"><Site /></MotionConfig></BrowserRouter>; }

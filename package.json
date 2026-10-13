@@ -1,0 +1,11 @@
+{
+  "name": "dr-aditya-nimbkar-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dr. Aditya Nimbkar - Fetal Medicine, Reproductive Care & High-Risk Obstetrics Platform",
+  "scripts": {
+    "install": "npm install --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "vercel-build": "npm install --prefix frontend && npm run build --prefix frontend"
+  }
+}

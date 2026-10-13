@@ -9,7 +9,9 @@ import {
   images,
   fetalClinicalShowcase,
   pregnancyEmergencyCase,
-  clinicalCasesGallery
+  clinicalCasesGallery,
+  fertilityClinicalShowcase,
+  gynaecologyClinicalShowcase
 } from '../data/practice';
 
 export default function Service({ serviceId }) {
@@ -257,51 +259,138 @@ export default function Service({ serviceId }) {
 
       {/* FERTILITY & IVF CLINICAL SUCCESS */}
       {serviceId === 'fertility-care' && (
-        <section className="section-padding container ivf-milestone-section" data-testid="ivf-milestone-showcase">
+        <>
+          <section className="section-padding container ivf-milestone-section" data-testid="ivf-milestone-showcase">
+            <Reveal>
+              <Chapter number="02">REPRODUCTIVE MEDICINE & IVF IN PRACTICE</Chapter>
+              <div className="section-head">
+                <h2 className="display-heading">
+                  From science to new life.<br />
+                  <em>Twins delivered with IVF, PGT-A & ERA.</em>
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="ivf-milestone-grid">
+              <Reveal className="ivf-milestone-visual">
+                <div
+                  className="ivf-image-container"
+                  onClick={() => setSelectedPhoto({
+                    image: '/images/ivf-pgta-era-twins-delivery.jpg',
+                    title: 'Successful delivery of twins with IVF, PGT A and ERA',
+                    caption: 'Successful delivery of twins with IVF, PGT A and ERA. Personalized embryo transfer timing and pre-implantation genetic testing delivering healthy babies.'
+                  })}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedPhoto({ image: '/images/ivf-pgta-era-twins-delivery.jpg', title: 'Successful delivery of twins with IVF, PGT A and ERA', caption: 'Successful delivery of twins with IVF, PGT A and ERA.' }); } }}
+                >
+                  <img src="/images/ivf-pgta-era-twins-delivery.jpg" alt="Dr Aditya Nimbkar with newborn twins" loading="lazy" />
+                  <span className="ivf-badge">IVF, PGT-A & ERA Success</span>
+                  <span className="clinical-zoom-hint" aria-hidden="true"><Plus size={18} /></span>
+                </div>
+                <p className="tiny emergency-photo-note">Dr. Aditya Nimbkar holding healthy newborn twins following successful IVF journey.</p>
+              </Reveal>
+
+              <Reveal className="ivf-milestone-content">
+                <div className="ivf-highlight-box">
+                  <span className="ivf-tag">CLINICAL EXCELLENCE IN REPRODUCTIVE MEDICINE</span>
+                  <h3>Personalised Possibilities. Evidence-Led Science.</h3>
+                  <p>
+                    Every fertility journey requires precision. Combining Endometrial Receptivity Analysis (ERA) to accurately identify the implantation window with Pre-implantation Genetic Testing for Aneuploidies (PGT-A) ensures the highest likelihood of healthy, viable full-term delivery.
+                  </p>
+                  <div className="ivf-points">
+                    <div><Check size={16} /><span><strong>PGT-A:</strong> Chromosomal screening for healthy embryo transfer.</span></div>
+                    <div><Check size={16} /><span><strong>ERA:</strong> Personalized timing for optimal endometrial receptivity.</span></div>
+                    <div><Check size={16} /><span><strong>Continuum:</strong> Complete care from conception through safe twin delivery.</span></div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+
+          <section className="section-padding container clinical-gallery-section" data-testid="fertility-cases-gallery">
+            <Reveal>
+              <Chapter number="03">REPRODUCTIVE LABORATORY & CLINICAL PRACTICE</Chapter>
+              <div className="section-head">
+                <h2 className="display-heading">
+                  Meticulous science.<br />
+                  <em>Gentle natural augmentation.</em>
+                </h2>
+                <p className="body-copy">
+                  From meticulous IUI semen preparation and natural conception support to diagnostic hysteroscopy and specialized operative care.
+                </p>
+              </div>
+            </Reveal>
+
+            <div className="clinical-cases-grid">
+              {fertilityClinicalShowcase.map((c, i) => (
+                <Reveal key={c.id} delay={i * 0.08} className="clinical-case-card-wrapper">
+                  <div
+                    className="clinical-case-card"
+                    onClick={() => setSelectedPhoto(c)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedPhoto(c); } }}
+                    data-testid={`fertility-case-${c.id}`}
+                  >
+                    <div className="clinical-case-media">
+                      <img src={c.image} alt={c.title} loading="lazy" />
+                      <span className="clinical-case-badge">{c.badge}</span>
+                      <span className="clinical-zoom-hint" aria-hidden="true"><Plus size={18} /></span>
+                    </div>
+                    <div className="clinical-case-body">
+                      <h4>{c.title}</h4>
+                      <p className="clinical-case-caption">“{c.caption}”</p>
+                      <span className="clinical-outcome-pill"><Check size={14} />{c.outcome}</span>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+        </>
+      )}
+
+      {/* GYNAECOLOGY CLINICAL SHOWCASE */}
+      {serviceId === 'gynaecology' && (
+        <section className="section-padding container clinical-gallery-section" data-testid="gynaecology-cases-gallery">
           <Reveal>
-            <Chapter number="02">REPRODUCTIVE MEDICINE & IVF IN PRACTICE</Chapter>
+            <Chapter number="02">AUTHENTIC SURGICAL & OPERATIVE OUTCOMES</Chapter>
             <div className="section-head">
               <h2 className="display-heading">
-                From science to new life.<br />
-                <em>Twins delivered with IVF, PGT-A & ERA.</em>
+                Complex gynaecology.<br />
+                <em>Definitive surgical precision.</em>
               </h2>
+              <p className="body-copy">
+                From prolapse reconstruction with sacrospinous fixation and bloodless fibroid excision to fertility-preserving emergency repairs.
+              </p>
             </div>
           </Reveal>
 
-          <div className="ivf-milestone-grid">
-            <Reveal className="ivf-milestone-visual">
-              <div
-                className="ivf-image-container"
-                onClick={() => setSelectedPhoto({
-                  image: '/images/ivf-pgta-era-twins-delivery.jpg',
-                  title: 'Successful delivery of twins with IVF, PGT A and ERA',
-                  caption: 'Successful delivery of twins with IVF, PGT A and ERA. Personalized embryo transfer timing and pre-implantation genetic testing delivering healthy babies.'
-                })}
-                role="button"
-                tabIndex={0}
-                onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedPhoto({ image: '/images/ivf-pgta-era-twins-delivery.jpg', title: 'Successful delivery of twins with IVF, PGT A and ERA', caption: 'Successful delivery of twins with IVF, PGT A and ERA.' }); } }}
-              >
-                <img src="/images/ivf-pgta-era-twins-delivery.jpg" alt="Dr Aditya Nimbkar with newborn twins" loading="lazy" />
-                <span className="ivf-badge">IVF, PGT-A & ERA Success</span>
-                <span className="clinical-zoom-hint" aria-hidden="true"><Plus size={18} /></span>
-              </div>
-              <p className="tiny emergency-photo-note">Dr. Aditya Nimbkar holding healthy newborn twins following successful IVF journey.</p>
-            </Reveal>
-
-            <Reveal className="ivf-milestone-content">
-              <div className="ivf-highlight-box">
-                <span className="ivf-tag">CLINICAL EXCELLENCE IN REPRODUCTIVE MEDICINE</span>
-                <h3>Personalised Possibilities. Evidence-Led Science.</h3>
-                <p>
-                  Every fertility journey requires precision. Combining Endometrial Receptivity Analysis (ERA) to accurately identify the implantation window with Pre-implantation Genetic Testing for Aneuploidies (PGT-A) ensures the highest likelihood of healthy, viable full-term delivery.
-                </p>
-                <div className="ivf-points">
-                  <div><Check size={16} /><span><strong>PGT-A:</strong> Chromosomal screening for healthy embryo transfer.</span></div>
-                  <div><Check size={16} /><span><strong>ERA:</strong> Personalized timing for optimal endometrial receptivity.</span></div>
-                  <div><Check size={16} /><span><strong>Continuum:</strong> Complete care from conception through safe twin delivery.</span></div>
+          <div className="clinical-cases-grid">
+            {gynaecologyClinicalShowcase.map((c, i) => (
+              <Reveal key={c.id} delay={i * 0.08} className="clinical-case-card-wrapper">
+                <div
+                  className="clinical-case-card"
+                  onClick={() => setSelectedPhoto(c)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedPhoto(c); } }}
+                  data-testid={`gyn-case-${c.id}`}
+                >
+                  <div className="clinical-case-media">
+                    <img src={c.image} alt={c.title} loading="lazy" />
+                    <span className="clinical-case-badge">{c.badge}</span>
+                    <span className="clinical-zoom-hint" aria-hidden="true"><Plus size={18} /></span>
+                  </div>
+                  <div className="clinical-case-body">
+                    <h4>{c.title}</h4>
+                    <p className="clinical-case-caption">“{c.caption}”</p>
+                    <span className="clinical-outcome-pill"><Check size={14} />{c.outcome}</span>
+                  </div>
                 </div>
-              </div>
-            </Reveal>
+              </Reveal>
+            ))}
           </div>
         </section>
       )}
@@ -309,7 +398,7 @@ export default function Service({ serviceId }) {
       {/* WHAT TO EXPECT */}
       <section className="section-padding container service-expect">
         <Reveal>
-          <Chapter number={serviceId === 'fetal-medicine' || serviceId === 'fertility-care' ? '03' : serviceId === 'pregnancy-care' ? '04' : '02'}>
+          <Chapter number={serviceId === 'pregnancy-care' || serviceId === 'fertility-care' ? '04' : '03'}>
             WHAT YOUR VISIT CAN LOOK LIKE
           </Chapter>
           <h2 className="display-heading" data-testid="service-expect-heading">
@@ -344,7 +433,7 @@ export default function Service({ serviceId }) {
       <section className="service-faq-band">
         <div className="container faq-section">
           <Reveal>
-            <Chapter number={serviceId === 'fetal-medicine' || serviceId === 'fertility-care' ? '04' : serviceId === 'pregnancy-care' ? '05' : '03'}>
+            <Chapter number={serviceId === 'pregnancy-care' || serviceId === 'fertility-care' ? '05' : '04'}>
               YOUR QUESTIONS, ANSWERED
             </Chapter>
             <h2 className="display-heading" data-testid="service-faq-heading">

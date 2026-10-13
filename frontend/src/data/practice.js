@@ -33,7 +33,22 @@ export const images = {
   placentaPrevia: '/images/placenta-previa-emergency-caesarean.jpg',
   uterineRupture: '/images/uterine-rupture-delivery-surgery.jpg',
   mulundOpd: '/images/dr-aditya-mulund-opd.jpg',
+  hysteroscopy: '/images/dr-aditya-hysteroscopy.jpg',
+  reproductiveLab: '/images/dr-aditya-reproductive-lab.jpg',
+  myomectomyFibroids: '/images/myomectomy-fibroids.jpg',
+  bLynchSuture: '/images/b-lynch-postpartum-suture.jpg',
+  drAdityaOtDelivery: '/images/dr-aditya-ot-delivery.jpg',
+  iuiSemenPrep: '/images/iui-semen-preparation.jpg',
+  iuiNaturalConception: '/images/iui-natural-conception.jpg',
+  hysteroscopyFertility: '/images/hysteroscopy-fertility-evaluation.jpg',
+  rupturedUterinePregnancy: '/images/ruptured-uterine-pregnancy-repair.jpg',
+  sacrospinousFixation: '/images/sacrospinous-fixation-prolapse.jpg',
+  ovarianCancerRemoval: '/images/ovarian-cancer-removal.jpg',
+  fibroidMappingRemoval: '/images/fibroid-mapping-removal.jpg',
+  cancerousFibroidEmbolization: '/images/cancerous-fibroid-embolization.jpg',
+  bLynchPostpartumSuture: '/images/b-lynch-postpartum-suture.jpg',
 };
+
 
 export const clinicLocations = {
   Thane: {
@@ -213,8 +228,133 @@ export const clinicalCasesGallery = [
     image: '/images/dr-aditya-mulund-opd.jpg',
     caption: 'Early morning pregnancy OPD at Mulund',
     outcome: 'Dedicated antenatal consultation at Maher Maternity and Nursing Home, Mulund.'
+  },
+  {
+    id: 'case-hysteroscopy-mas',
+    title: 'Operative Hysteroscopy & Minimal Access Surgery',
+    category: 'Gynaecology & Minimal Access',
+    badge: 'Minimal Access Surgery',
+    image: '/images/dr-aditya-hysteroscopy.jpg',
+    caption: 'Precision endoscopic evaluation and minimal access intra-uterine surgery performed by Dr. Aditya Nimbkar.',
+    outcome: 'Preservation of uterine cavity anatomy with rapid same-day recovery.'
+  },
+  {
+    id: 'case-reproductive-andrology',
+    title: 'Advanced Reproductive Laboratory Assessment',
+    category: 'Reproductive Medicine & IVF',
+    badge: 'Reproductive Endocrinology',
+    image: '/images/dr-aditya-reproductive-lab.jpg',
+    caption: 'Personalized reproductive endocrinology evaluation and gamete assessment in dedicated fertility laboratory.',
+    outcome: 'Optimized embryo transfer and tailored reproductive treatment protocols.'
+  },
+  {
+    id: 'case-b-lynch-brace',
+    title: 'B-Lynch Compression Suture for Uterine Salvage',
+    category: 'Obstetric Emergencies',
+    badge: 'Uterine Conservation',
+    image: '/images/b-lynch-postpartum-suture.jpg',
+    caption: 'B Lynch suture in a patient with postpartum hemorrhage to save her uterus for next pregnancy.',
+    outcome: 'Successful arrest of haemorrhage and preservation of future fertility.'
   }
 ];
+
+export const fertilityClinicalShowcase = [
+  {
+    id: 'fertility-semen-prep',
+    title: 'Meticulous IUI Semen Sample Preparation',
+    category: 'Reproductive Medicine & IUI',
+    badge: 'IUI Laboratory Protocol',
+    image: '/images/iui-semen-preparation.jpg',
+    caption: 'Preparing IUI semen sample meticulously is very important to ensure the best of sperms are available for insemination and to obtain the best results',
+    outcome: 'Optimized sperm motility and concentration for maximal fertilisation potential.'
+  },
+  {
+    id: 'fertility-natural-iui',
+    title: 'Natural Augmentation & Accessible Care',
+    category: 'Fertility & IUI',
+    badge: 'Natural Conception Support',
+    image: '/images/iui-natural-conception.jpg',
+    caption: 'IUI is simply an augmentation of something that\'s natural and is one of the easiest and most affordable forms of infertility treatment',
+    outcome: 'Accessible, evidence-guided conception leading to successful pregnancy.'
+  },
+  {
+    id: 'fertility-hysteroscopy-eval',
+    title: 'Diagnostic & Operative Hysteroscopy',
+    category: 'Fertility & Uterine Cavity',
+    badge: 'Endoscopic Fertility Surgery',
+    image: '/images/hysteroscopy-fertility-evaluation.jpg',
+    caption: 'Hysteroscopy often helps recognize hidden uterine problems and correct them to help patients conceive even without any further treatment for infertility',
+    outcome: 'Identification and correction of subtle intra-uterine pathology, restoring fertility naturally.'
+  },
+  {
+    id: 'fertility-ivf-delivery',
+    title: 'Twin Delivery with IVF, PGT-A & ERA',
+    category: 'Advanced IVF Success',
+    badge: 'Genetics & Implantation Window',
+    image: '/images/ivf-pgta-era-twins-delivery.jpg',
+    caption: 'Successful delivery of twins with IVF, PGT A and ERA',
+    outcome: 'Healthy term twin delivery following individualized genetic and receptivity mapping.'
+  },
+  {
+    id: 'fertility-ot-specialist',
+    title: 'Specialized Surgical Infertility Care',
+    category: 'Reproductive Surgery',
+    badge: 'Infertility & IVF Care',
+    image: '/images/dr-aditya-ot-delivery.jpg',
+    caption: 'Dr. Aditya Nimbkar providing dedicated surgical and operative interventions for complex infertility and assisted reproduction.',
+    outcome: 'Comprehensive surgical and reproductive continuum of care.'
+  }
+];
+
+export const gynaecologyClinicalShowcase = [
+  {
+    id: 'gyn-prolapse-repair',
+    title: 'Sacrospinous Fixation & AP Repair in Recurrent Prolapse',
+    category: 'Pelvic Organ Prolapse',
+    badge: 'Pelvic Floor Reconstruction',
+    image: '/images/sacrospinous-fixation-prolapse.jpg',
+    caption: 'Correction of prolapse with sacrospinous fixation and AP repair in a 80 year old female with failed previous prolapse surgery',
+    outcome: 'Permanent anatomical restoration and relief of long-standing prolapse symptoms in an 80-year-old female.'
+  },
+  {
+    id: 'gyn-fibroid-3kg-removal',
+    title: 'Ultrasound Mapping & Removal of 3 kg Uterine Fibroids',
+    category: 'Complex Gynaecological Surgery',
+    badge: 'Fibroid Mapping & Surgery',
+    image: '/images/fibroid-mapping-removal.jpg',
+    caption: 'Preoperative fibroid mapping on ultrasound followed by perfect removal of the uterus containing these 3 kg fibroids',
+    outcome: 'Complete surgical excision of 3 kg fibroid mass guided by meticulous preoperative ultrasound mapping.'
+  },
+  {
+    id: 'gyn-embolization-fibroid',
+    title: 'Internal Iliac Artery Embolization & Fibroid Excision',
+    category: 'Complex Gynaecological Surgery',
+    badge: 'Internal Iliac Embolization',
+    image: '/images/cancerous-fibroid-embolization.jpg',
+    caption: 'Cancerous fibroid with intestinal adhesions being removed successfully after internal illiac artery embolization to reduce blood loss in surgery. Patient didn\'t require any blood transfusion',
+    outcome: 'Tumor removed bloodlessly with intestinal adhesions released; zero blood transfusion required.'
+  },
+  {
+    id: 'gyn-ovarian-cancer-removal',
+    title: 'Surgical Resection of Large Ovarian Tumor',
+    category: 'Gynaecological Oncology',
+    badge: 'Ovarian Tumor Resection',
+    image: '/images/ovarian-cancer-removal.jpg',
+    caption: 'Removal of a large ovarian cancer',
+    outcome: 'Complete en-bloc tumour excision with smooth post-operative recovery.'
+  },
+  {
+    id: 'gyn-ruptured-ectopic-repair',
+    title: '1st Trimester Ruptured Uterine Pregnancy Repair',
+    category: 'Emergency Gynaecology',
+    badge: 'Fertility-Preserving Repair',
+    image: '/images/ruptured-uterine-pregnancy-repair.jpg',
+    caption: 'Ruptured uterine pregnancy in 1st trimester being repaired. Patient conceived again successfully after 1 year.',
+    outcome: 'Emergency uterine repair preserving fertility; patient successfully conceived again after 1 year.'
+  }
+];
+
+
 
 export const services = [
   {
