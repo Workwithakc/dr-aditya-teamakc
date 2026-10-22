@@ -4327,21 +4327,191 @@
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Responsive Aspect Ratios for Clinical Cards */
+.clinical-card-media {
+  aspect-ratio: 1.18 !important;
+}
+
+.clinical-case-media {
+  aspect-ratio: 1.22 !important;
+}
+
+@media (max-width: 768px) {
+  .clinical-card-media {
+    aspect-ratio: 1.08 !important;
+  }
+  .clinical-case-media {
+    aspect-ratio: 1.12 !important;
+  }
+  .gallery-card-photo .gallery-card-visual {
+    aspect-ratio: 1.15 !important;
+  }
+}
+
+/* 1. Doctor Portrait & Workstation Photos (Head at top) */
 .gallery-card-img[src*="dr-aditya-fetal-kalyan"],
+.clinical-card-media img[src*="dr-aditya-fetal-kalyan"],
+.clinical-case-media img[src*="dr-aditya-fetal-kalyan"] {
+  object-position: center 1% !important;
+}
+
 .gallery-card-img[src*="dr-aditya-fetal-thane"],
+.clinical-card-media img[src*="dr-aditya-fetal-thane"],
+.clinical-case-media img[src*="dr-aditya-fetal-thane"] {
+  object-position: center 0% !important;
+}
+
+.gallery-card-img[src*="dr-aditya-thane-clinic"],
+.clinical-card-media img[src*="dr-aditya-thane-clinic"],
+.clinical-case-media img[src*="dr-aditya-thane-clinic"] {
+  object-position: center 3% !important;
+}
+
 .gallery-card-img[src*="dr-aditya-mulund-opd"],
+.clinical-card-media img[src*="dr-aditya-mulund-opd"],
+.clinical-case-media img[src*="dr-aditya-mulund-opd"] {
+  object-position: center 3% !important;
+}
+
 .gallery-card-img[src*="dr-aditya-ot-delivery"],
-.gallery-card-img[src*="dr-aditya-portrait"] {
-  object-position: center 6% !important;
+.clinical-card-media img[src*="dr-aditya-ot-delivery"],
+.clinical-case-media img[src*="dr-aditya-ot-delivery"] {
+  object-position: center 4% !important;
+}
+
+.gallery-card-img[src*="dr-aditya-portrait"],
+.clinical-card-media img[src*="dr-aditya-portrait"],
+.clinical-case-media img[src*="dr-aditya-portrait"] {
+  object-position: center 3% !important;
+}
+
+.gallery-card-img[src*="dr-aditya-reproductive-lab"],
+.clinical-card-media img[src*="dr-aditya-reproductive-lab"],
+.clinical-case-media img[src*="dr-aditya-reproductive-lab"] {
+  object-position: center 3% !important;
+}
+
+.gallery-card-img[src*="dr-aditya-hysteroscopy"],
+.clinical-card-media img[src*="dr-aditya-hysteroscopy"],
+.clinical-case-media img[src*="dr-aditya-hysteroscopy"] {
+  object-position: center 3% !important;
 }
 
 .gallery-card-img[src*="gestational-diabetes-preterm-delivery"],
-.gallery-card-img[src*="endometrial-cancer-specimen-recovery"],
 .clinical-case-media img[src*="gestational-diabetes-preterm-delivery"],
+.clinical-card-media img[src*="gestational-diabetes-preterm-delivery"] {
+  object-position: center 3% !important;
+}
+
+.gallery-card-img[src*="endometrial-cancer-specimen-recovery"],
 .clinical-case-media img[src*="endometrial-cancer-specimen-recovery"],
-.clinical-card-media img[src*="gestational-diabetes-preterm-delivery"],
 .clinical-card-media img[src*="endometrial-cancer-specimen-recovery"] {
+  object-position: center 3% !important;
+}
+
+.gallery-card-img[src*="ivf-pgta-era-twins-delivery"],
+.clinical-case-media img[src*="ivf-pgta-era-twins-delivery"],
+.clinical-card-media img[src*="ivf-pgta-era-twins-delivery"] {
+  object-position: center 5% !important;
+}
+
+.gallery-card-img[src*="fetal-3d-twins-kalyan"],
+.clinical-card-media img[src*="fetal-3d-twins-kalyan"],
+.clinical-case-media img[src*="fetal-3d-twins-kalyan"] {
   object-position: center 8% !important;
+}
+
+.gallery-card-img[src*="fetal-3d-face-kalyan"],
+.clinical-card-media img[src*="fetal-3d-face-kalyan"],
+.clinical-case-media img[src*="fetal-3d-face-kalyan"] {
+  object-position: center center !important;
+}
+
+.gallery-card-img[src*="uterine-rupture-delivery-surgery"],
+.clinical-case-media img[src*="uterine-rupture-delivery-surgery"],
+.clinical-card-media img[src*="uterine-rupture-delivery-surgery"] {
+  object-position: center 6% !important;
+}
+
+.gallery-card-img[src*="ovarian-cancer-removal"],
+.clinical-case-media img[src*="ovarian-cancer-removal"],
+.clinical-card-media img[src*="ovarian-cancer-removal"] {
+  object-position: center 6% !important;
+}
+
+.gallery-card-img[src*="fibroid-mapping-removal"],
+.clinical-case-media img[src*="fibroid-mapping-removal"],
+.clinical-card-media img[src*="fibroid-mapping-removal"] {
+  object-position: center 8% !important;
+}
+
+.gallery-card-img[src*="myomectomy-fibroids"],
+.clinical-case-media img[src*="myomectomy-fibroids"],
+.clinical-card-media img[src*="myomectomy-fibroids"] {
+  object-position: center center !important;
+}
+
+.gallery-card-img[src*="sacrospinous-fixation-prolapse"],
+.clinical-case-media img[src*="sacrospinous-fixation-prolapse"],
+.clinical-card-media img[src*="sacrospinous-fixation-prolapse"] {
+  object-position: center center !important;
+}
+
+.gallery-card-img[src*="laparoscopic-hysterectomy-endometrial-cancer"],
+.clinical-case-media img[src*="laparoscopic-hysterectomy-endometrial-cancer"],
+.clinical-card-media img[src*="laparoscopic-hysterectomy-endometrial-cancer"] {
+  object-position: center 15% !important;
+}
+
+.gallery-card-img[src*="hystero-laparoscopy-tubal-cannulation"],
+.clinical-case-media img[src*="hystero-laparoscopy-tubal-cannulation"],
+.clinical-card-media img[src*="hystero-laparoscopy-tubal-cannulation"] {
+  object-position: center 15% !important;
+}
+
+.gallery-card-img[src*="b-lynch-postpartum-suture"],
+.gallery-card-img[src*="b-lynch-suture"],
+.clinical-case-media img[src*="b-lynch-postpartum-suture"],
+.clinical-case-media img[src*="b-lynch-suture"],
+.clinical-card-media img[src*="b-lynch-postpartum-suture"],
+.clinical-card-media img[src*="b-lynch-suture"] {
+  object-position: center center !important;
+}
+
+.gallery-card-img[src*="emergency-caesarean-2am"],
+.clinical-case-media img[src*="emergency-caesarean-2am"],
+.clinical-card-media img[src*="emergency-caesarean-2am"] {
+  object-position: center 8% !important;
+}
+
+.gallery-card-img[src*="caesarean-hysterectomy-accreta"],
+.clinical-case-media img[src*="caesarean-hysterectomy-accreta"],
+.clinical-card-media img[src*="caesarean-hysterectomy-accreta"] {
+  object-position: center 12% !important;
+}
+
+.gallery-card-img[src*="dr-aditya-emergency-surgery"],
+.clinical-case-media img[src*="dr-aditya-emergency-surgery"],
+.clinical-card-media img[src*="dr-aditya-emergency-surgery"] {
+  object-position: center 12% !important;
+}
+
+.gallery-card-img[src*="iui-semen-preparation"],
+.clinical-case-media img[src*="iui-semen-preparation"],
+.clinical-card-media img[src*="iui-semen-preparation"] {
+  object-position: center 12% !important;
+}
+
+.gallery-card-img[src*="hysteroscopy-fertility-evaluation"],
+.clinical-case-media img[src*="hysteroscopy-fertility-evaluation"],
+.clinical-card-media img[src*="hysteroscopy-fertility-evaluation"] {
+  object-position: center 15% !important;
+}
+
+.gallery-card-img[src*="iui-natural-conception"],
+.clinical-case-media img[src*="iui-natural-conception"],
+.clinical-card-media img[src*="iui-natural-conception"] {
+  object-position: center 6% !important;
 }
 
 .gallery-card:hover .gallery-card-img {
