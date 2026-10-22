@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, Check, MapPin, Play, Instagram } from 'lucide-react';
 import { Reveal, Chapter, CareIcon, TextLink, FaqList } from './Shared';
 import { BookButton } from './Appointment';
-import { images, services, reviews, generalFaqs, clinicLocations } from '../data/practice';
+import { images, services, reviews, generalFaqs, clinicLocations, getImagePosition } from '../data/practice';
 
 export const EvidenceStrip = () => <section className="evidence-strip container" data-testid="experience-strip">{[['7+', 'Years of clinical experience'], ['2,000+', 'Sonographies performed'], ['3,500+', 'Deliveries as part of hospital teams'], ['20', 'Research publications']].map(([n, label]) => <div key={n}><strong>{n}</strong><span>{label}</span></div>)}</section>;
 export const CareSection = () => <section className="section-padding container" id="our-care"><Reveal><Chapter number="01">CARE THAT GROWS WITH YOU</Chapter><div className="section-head"><h2 className="display-heading" data-testid="care-heading">Different chapters.<br /><em>The same thoughtful care.</em></h2><p data-testid="care-description">Wherever you are in your journey,<br />you don’t have to navigate it alone.</p></div></Reveal><div className="care-grid">{services.map((s, i) => <Reveal key={s.id} delay={i * .07}><Link to={`/${s.id}`} className={`care-card care-card-${i}`} data-testid={`care-card-${s.id}`}><div className="care-card-top"><CareIcon type={s.icon} /><span>{s.number}</span></div><div><h3>{s.title}</h3><p>{s.short}</p></div><span className="care-card-link">Explore care<ArrowUpRight size={18} /></span></Link></Reveal>)}</div></section>;
@@ -47,7 +47,12 @@ export const ClinicalMediaPreview = () => (
       <Reveal delay={0.1} className="preview-media-card-wrapper">
         <Link to="/gallery?tab=gynaecology" className="preview-media-card" data-testid="home-preview-gyn">
           <div className="preview-media-visual">
-            <img src="/images/sacrospinous-fixation-prolapse.jpg" alt="Sacrospinous Fixation Surgery" loading="lazy" />
+            <img
+              src="/images/sacrospinous-fixation-prolapse.jpg"
+              alt="Sacrospinous Fixation Surgery"
+              loading="lazy"
+              style={{ objectPosition: getImagePosition('/images/sacrospinous-fixation-prolapse.jpg') }}
+            />
             <span className="preview-badge case-badge">Gynaecological Surgery</span>
           </div>
           <div className="preview-media-info">
@@ -60,7 +65,12 @@ export const ClinicalMediaPreview = () => (
       <Reveal delay={0.15} className="preview-media-card-wrapper">
         <Link to="/gallery?tab=pregnancy" className="preview-media-card" data-testid="home-preview-obs">
           <div className="preview-media-visual">
-            <img src="/images/b-lynch-postpartum-suture.jpg" alt="B-Lynch Postpartum Suture" loading="lazy" />
+            <img
+              src="/images/b-lynch-postpartum-suture.jpg"
+              alt="B-Lynch Postpartum Suture"
+              loading="lazy"
+              style={{ objectPosition: getImagePosition('/images/b-lynch-postpartum-suture.jpg') }}
+            />
             <span className="preview-badge emergency-badge">Obstetric Emergency</span>
           </div>
           <div className="preview-media-info">

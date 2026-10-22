@@ -4352,7 +4352,7 @@
 .gallery-card-img[src*="dr-aditya-fetal-kalyan"],
 .clinical-card-media img[src*="dr-aditya-fetal-kalyan"],
 .clinical-case-media img[src*="dr-aditya-fetal-kalyan"] {
-  object-position: center 1% !important;
+  object-position: center 0% !important;
 }
 
 .gallery-card-img[src*="dr-aditya-fetal-thane"],
@@ -4364,49 +4364,49 @@
 .gallery-card-img[src*="dr-aditya-thane-clinic"],
 .clinical-card-media img[src*="dr-aditya-thane-clinic"],
 .clinical-case-media img[src*="dr-aditya-thane-clinic"] {
-  object-position: center 3% !important;
+  object-position: center 0% !important;
 }
 
 .gallery-card-img[src*="dr-aditya-mulund-opd"],
 .clinical-card-media img[src*="dr-aditya-mulund-opd"],
 .clinical-case-media img[src*="dr-aditya-mulund-opd"] {
-  object-position: center 3% !important;
+  object-position: center 0% !important;
 }
 
 .gallery-card-img[src*="dr-aditya-ot-delivery"],
 .clinical-card-media img[src*="dr-aditya-ot-delivery"],
 .clinical-case-media img[src*="dr-aditya-ot-delivery"] {
-  object-position: center 4% !important;
+  object-position: center 0% !important;
 }
 
 .gallery-card-img[src*="dr-aditya-portrait"],
 .clinical-card-media img[src*="dr-aditya-portrait"],
 .clinical-case-media img[src*="dr-aditya-portrait"] {
-  object-position: center 3% !important;
+  object-position: center 0% !important;
 }
 
 .gallery-card-img[src*="dr-aditya-reproductive-lab"],
 .clinical-card-media img[src*="dr-aditya-reproductive-lab"],
 .clinical-case-media img[src*="dr-aditya-reproductive-lab"] {
-  object-position: center 3% !important;
+  object-position: center 0% !important;
 }
 
 .gallery-card-img[src*="dr-aditya-hysteroscopy"],
 .clinical-card-media img[src*="dr-aditya-hysteroscopy"],
 .clinical-case-media img[src*="dr-aditya-hysteroscopy"] {
-  object-position: center 3% !important;
+  object-position: center 0% !important;
 }
 
 .gallery-card-img[src*="gestational-diabetes-preterm-delivery"],
 .clinical-case-media img[src*="gestational-diabetes-preterm-delivery"],
 .clinical-card-media img[src*="gestational-diabetes-preterm-delivery"] {
-  object-position: center 3% !important;
+  object-position: center 0% !important;
 }
 
 .gallery-card-img[src*="endometrial-cancer-specimen-recovery"],
 .clinical-case-media img[src*="endometrial-cancer-specimen-recovery"],
 .clinical-card-media img[src*="endometrial-cancer-specimen-recovery"] {
-  object-position: center 3% !important;
+  object-position: center 0% !important;
 }
 
 .gallery-card-img[src*="ivf-pgta-era-twins-delivery"],

@@ -11,7 +11,8 @@ import {
   pregnancyEmergencyCase,
   clinicalCasesGallery,
   fertilityClinicalShowcase,
-  gynaecologyClinicalShowcase
+  gynaecologyClinicalShowcase,
+  getImagePosition
 } from '../data/practice';
 
 export default function Service({ serviceId }) {
@@ -133,7 +134,12 @@ export default function Service({ serviceId }) {
                   data-testid={`fetal-card-${item.id}`}
                 >
                   <div className="clinical-card-media">
-                    <img src={item.image} alt={item.title} loading="lazy" />
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      style={{ objectPosition: getImagePosition(item.image, item.objectPosition) }}
+                    />
                     <span className="clinical-badge">{item.badge}</span>
                     <span className="clinical-zoom-hint" aria-hidden="true"><Plus size={18} /></span>
                   </div>
@@ -177,7 +183,12 @@ export default function Service({ serviceId }) {
                   tabIndex={0}
                   onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedPhoto({ image: pregnancyEmergencyCase.image, title: pregnancyEmergencyCase.title, caption: pregnancyEmergencyCase.story }); } }}
                 >
-                  <img src={pregnancyEmergencyCase.image} alt="Dr. Aditya Nimbkar Emergency Surgery" loading="lazy" />
+                  <img
+                    src={pregnancyEmergencyCase.image}
+                    alt="Dr. Aditya Nimbkar Emergency Surgery"
+                    loading="lazy"
+                    style={{ objectPosition: getImagePosition(pregnancyEmergencyCase.image, pregnancyEmergencyCase.objectPosition) }}
+                  />
                   <span className="emergency-photo-badge"><Stethoscope size={14} />Emergency Operation Theatre</span>
                   <span className="clinical-zoom-hint" aria-hidden="true"><Plus size={18} /></span>
                 </div>
@@ -246,7 +257,12 @@ export default function Service({ serviceId }) {
                       </div>
                     )}
                     <div className="clinical-case-media">
-                      <img src={c.image} alt={c.title} loading="lazy" />
+                      <img
+                        src={c.image}
+                        alt={c.title}
+                        loading="lazy"
+                        style={{ objectPosition: getImagePosition(c.image, c.objectPosition) }}
+                      />
                       <span className="clinical-case-badge">{c.badge}</span>
                       <span className="clinical-zoom-hint" aria-hidden="true"><Plus size={18} /></span>
                     </div>
@@ -290,7 +306,12 @@ export default function Service({ serviceId }) {
                   tabIndex={0}
                   onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedPhoto({ image: '/images/ivf-pgta-era-twins-delivery.jpg', title: 'Successful delivery of twins with IVF, PGT A and ERA', caption: 'Successful delivery of twins with IVF, PGT A and ERA.' }); } }}
                 >
-                  <img src="/images/ivf-pgta-era-twins-delivery.jpg" alt="Dr Aditya Nimbkar with newborn twins" loading="lazy" />
+                  <img
+                    src="/images/ivf-pgta-era-twins-delivery.jpg"
+                    alt="Dr Aditya Nimbkar with newborn twins"
+                    loading="lazy"
+                    style={{ objectPosition: getImagePosition('/images/ivf-pgta-era-twins-delivery.jpg', 'center 4%') }}
+                  />
                   <span className="ivf-badge">IVF, PGT-A & ERA Success</span>
                   <span className="clinical-zoom-hint" aria-hidden="true"><Plus size={18} /></span>
                 </div>
@@ -340,7 +361,12 @@ export default function Service({ serviceId }) {
                     data-testid={`fertility-case-${c.id}`}
                   >
                     <div className="clinical-case-media">
-                      <img src={c.image} alt={c.title} loading="lazy" />
+                      <img
+                        src={c.image}
+                        alt={c.title}
+                        loading="lazy"
+                        style={{ objectPosition: getImagePosition(c.image, c.objectPosition) }}
+                      />
                       <span className="clinical-case-badge">{c.badge}</span>
                       <span className="clinical-zoom-hint" aria-hidden="true"><Plus size={18} /></span>
                     </div>
@@ -385,7 +411,12 @@ export default function Service({ serviceId }) {
                   data-testid={`gyn-case-${c.id}`}
                 >
                   <div className="clinical-case-media">
-                    <img src={c.image} alt={c.title} loading="lazy" />
+                    <img
+                      src={c.image}
+                      alt={c.title}
+                      loading="lazy"
+                      style={{ objectPosition: getImagePosition(c.image, c.objectPosition) }}
+                    />
                     <span className="clinical-case-badge">{c.badge}</span>
                     <span className="clinical-zoom-hint" aria-hidden="true"><Plus size={18} /></span>
                   </div>

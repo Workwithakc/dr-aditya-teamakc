@@ -21,7 +21,7 @@ import {
 import { PageIntro, Reveal, Chapter, Starburst } from '../components/Shared';
 import { BookButton } from '../components/Appointment';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '../components/ui/dialog';
-import { instagramProfile, instagramMediaGallery, contact } from '../data/practice';
+import { instagramProfile, instagramMediaGallery, contact, getImagePosition } from '../data/practice';
 
 const CATEGORIES = [
   { key: 'all', label: 'All Media & Cases', icon: Sparkles },
@@ -284,6 +284,7 @@ export default function Gallery() {
                         alt={item.title}
                         loading="lazy"
                         className="gallery-card-img"
+                        style={{ objectPosition: isVideo ? 'center center' : getImagePosition(item.image, item.objectPosition) }}
                       />
                       <span className="gallery-card-badge">{item.badge}</span>
 

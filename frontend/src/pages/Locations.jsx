@@ -2,7 +2,7 @@ import { useSearchParams } from 'react-router-dom';
 import { MapPin, ArrowUpRight, Clock3, Phone, Check } from 'lucide-react';
 import { PageIntro, Reveal, Chapter } from '../components/Shared';
 import { BookButton } from '../components/Appointment';
-import { clinicLocations } from '../data/practice';
+import { clinicLocations, getImagePosition } from '../data/practice';
 
 export default function Locations() {
   const [params, setParams] = useSearchParams();
@@ -57,6 +57,7 @@ export default function Locations() {
                 alt={`${current.clinicName} - ${city}`}
                 className="location-feature-image"
                 data-testid="location-clinic-image"
+                style={{ objectPosition: getImagePosition(current.image) }}
               />
               <span className="location-feature-badge">
                 <MapPin size={14} />

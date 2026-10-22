@@ -49,6 +49,36 @@ export const images = {
   bLynchPostpartumSuture: '/images/b-lynch-postpartum-suture.jpg',
 };
 
+export const getImagePosition = (src, override) => {
+  if (override) return override;
+  if (!src || typeof src !== 'string') return 'center 15%';
+  if (src.includes('dr-aditya-fetal-kalyan')) return 'center 0%';
+  if (src.includes('dr-aditya-thane-clinic')) return 'center 0%';
+  if (src.includes('dr-aditya-fetal-thane')) return 'center 0%';
+  if (src.includes('dr-aditya-mulund-opd')) return 'center 0%';
+  if (src.includes('dr-aditya-ot-delivery')) return 'center 0%';
+  if (src.includes('dr-aditya-portrait')) return 'center 0%';
+  if (src.includes('dr-aditya-reproductive-lab')) return 'center 0%';
+  if (src.includes('dr-aditya-hysteroscopy')) return 'center 0%';
+  if (src.includes('gestational-diabetes-preterm-delivery')) return 'center 0%';
+  if (src.includes('endometrial-cancer-specimen-recovery')) return 'center 0%';
+  if (src.includes('ivf-pgta-era-twins-delivery')) return 'center 4%';
+  if (src.includes('uterine-rupture-delivery-surgery')) return 'center 6%';
+  if (src.includes('ovarian-cancer-removal')) return 'center 6%';
+  if (src.includes('iui-natural-conception')) return 'center 6%';
+  if (src.includes('emergency-caesarean-2am')) return 'center 8%';
+  if (src.includes('fetal-3d-twins-kalyan')) return 'center 8%';
+  if (src.includes('fibroid-mapping-removal')) return 'center 8%';
+  if (src.includes('dr-aditya-fetal-scan-kalyan')) return 'center 8%';
+  if (src.includes('dr-aditya-emergency-surgery')) return 'center 10%';
+  if (src.includes('caesarean-hysterectomy-accreta')) return 'center 10%';
+  if (src.includes('iui-semen-preparation')) return 'center 10%';
+  if (src.includes('hysteroscopy-fertility-evaluation')) return 'center 12%';
+  if (src.includes('laparoscopic-hysterectomy-endometrial-cancer')) return 'center 15%';
+  if (src.includes('hystero-laparoscopy-tubal-cannulation')) return 'center 15%';
+  return 'center center';
+};
+
 
 export const clinicLocations = {
   Thane: {

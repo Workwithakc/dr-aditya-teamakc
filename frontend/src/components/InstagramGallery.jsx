@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Play, Plus, ArrowUpRight, Instagram, Video, Image, Check, Sparkles, MapPin } from 'lucide-react';
 import { Reveal, Chapter } from './Shared';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from './ui/dialog';
-import { instagramProfile, instagramMediaGallery } from '../data/practice';
+import { instagramProfile, instagramMediaGallery, getImagePosition } from '../data/practice';
 
 export default function InstagramGallery() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -146,6 +146,7 @@ export default function InstagramGallery() {
                   alt={item.title}
                   loading="lazy"
                   className="media-preview-image"
+                  style={{ objectPosition: item.type === 'video' ? 'center center' : getImagePosition(item.image, item.objectPosition) }}
                 />
 
                 {item.type === 'video' ? (
