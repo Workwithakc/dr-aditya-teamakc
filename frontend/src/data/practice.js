@@ -3,11 +3,11 @@ export const contact = {
   emergency: process.env.REACT_APP_EMERGENCY_PHONE || '+91 74003 69817',
   email: process.env.REACT_APP_PRACTICE_EMAIL || 'nimbkaradi17@gmail.com',
   whatsapp: process.env.REACT_APP_WHATSAPP_URL || 'https://wa.me/917666842282',
-  calendly: process.env.REACT_APP_CALENDLY_URL || 'https://calendly.com/siddharthgunay/orthopaedic-consultation-dr-siddharth-gunay',
-  calendlyEmbed: process.env.REACT_APP_CALENDLY_EMBED_URL || 'https://calendly.com/siddharthgunay/orthopaedic-consultation-dr-siddharth-gunay?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=fcf8f4&text_color=3b2d26&primary_color=a0523f',
+  calendly: process.env.REACT_APP_CALENDLY_URL || 'https://calendly.com/nimbkaradi17/mulund-opd---maher-maternity-and-nursing-home',
+  calendlyEmbed: process.env.REACT_APP_CALENDLY_EMBED_URL || 'https://calendly.com/nimbkaradi17/mulund-opd---maher-maternity-and-nursing-home?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=fcf8f4&text_color=3b2d26&primary_color=a0523f',
   maps: process.env.REACT_APP_MAPS_URL || 'https://maps.google.com/?q=Ova+Fertility+Tieten+Medicity+Kasarvadavali+Thane',
   reviews: process.env.REACT_APP_GOOGLE_REVIEWS_URL || 'https://share.google/1vuK1voWsPZVKwgFV',
-  instagram: process.env.REACT_APP_INSTAGRAM_URL || 'https://www.instagram.com',
+  instagram: process.env.REACT_APP_INSTAGRAM_URL || 'https://www.instagram.com/dradityanimbkar/',
   facebook: process.env.REACT_APP_FACEBOOK_URL || 'https://www.facebook.com',
   youtube: process.env.REACT_APP_YOUTUBE_URL || 'https://youtube.com/@dradityanimbkar',
   practo: process.env.REACT_APP_PRACTO_URL || 'https://www.practo.com/thane/doctor/aditya-nimbkar-1',
@@ -167,6 +167,25 @@ export const pregnancyEmergencyCase = {
 
 export const clinicalCasesGallery = [
   {
+    id: 'case-gestational-diabetes-delivery',
+    title: 'Preterm Delivery in Uncontrolled Diabetes in Pregnancy',
+    category: 'High-Risk Obstetrics',
+    badge: '★ Featured Milestone',
+    image: '/images/gestational-diabetes-preterm-delivery.jpg',
+    caption: 'A baby delivered in a patient with uncontrolled diabetes Mellitus in pregnancy despite insulin with preterm labour. Mother successfully managed as well after delivery with just oral anti-diabetes medications',
+    outcome: 'Healthy neonate delivered; mother safely managed postpartum with oral medications alone without requiring continued insulin.',
+    isFeatured: true
+  },
+  {
+    id: 'case-b-lynch-brace',
+    title: 'B-Lynch Compression Suture for Uterine Salvage',
+    category: 'High-Risk Obstetrics',
+    badge: 'Uterine Conservation',
+    image: '/images/b-lynch-postpartum-suture.jpg',
+    caption: 'B Lynch suture in a patient with postpartum hemorrhage to save her uterus for next pregnancy.',
+    outcome: 'Successful arrest of haemorrhage and preservation of future fertility.'
+  },
+  {
     id: 'case-accreta-team',
     title: 'Caesarean Hysterectomy in Placenta Accreta Spectrum',
     category: 'High-Risk Obstetrics',
@@ -187,20 +206,11 @@ export const clinicalCasesGallery = [
   {
     id: 'case-cervical-cerclage',
     title: 'Cervical Cerclage for Cervical Incompetence',
-    category: 'Fetal & Maternal Medicine',
+    category: 'High-Risk Obstetrics',
     badge: 'Cervical Cerclage',
     image: '/images/cervical-cerclage-procedure.jpg',
     caption: 'Cervical cerclage for a woman with short cervix and multiple abortions - she delivered a healthy 3.2 kg baby successfully later',
     outcome: 'Delivered a healthy 3.2 kg baby successfully at term.'
-  },
-  {
-    id: 'case-ivf-twins',
-    title: 'Twin Delivery with IVF, PGT-A & ERA',
-    category: 'Reproductive Medicine & IVF',
-    badge: 'IVF & Genetics Success',
-    image: '/images/ivf-pgta-era-twins-delivery.jpg',
-    caption: 'Successful delivery of twins with IVF, PGT A and ERA',
-    outcome: 'Healthy twin babies delivered safe with Dr. Aditya Nimbkar.'
   },
   {
     id: 'case-bleeding-previa',
@@ -228,33 +238,6 @@ export const clinicalCasesGallery = [
     image: '/images/dr-aditya-mulund-opd.jpg',
     caption: 'Early morning pregnancy OPD at Mulund',
     outcome: 'Dedicated antenatal consultation at Maher Maternity and Nursing Home, Mulund.'
-  },
-  {
-    id: 'case-hysteroscopy-mas',
-    title: 'Operative Hysteroscopy & Minimal Access Surgery',
-    category: 'Gynaecology & Minimal Access',
-    badge: 'Minimal Access Surgery',
-    image: '/images/dr-aditya-hysteroscopy.jpg',
-    caption: 'Precision endoscopic evaluation and minimal access intra-uterine surgery performed by Dr. Aditya Nimbkar.',
-    outcome: 'Preservation of uterine cavity anatomy with rapid same-day recovery.'
-  },
-  {
-    id: 'case-reproductive-andrology',
-    title: 'Advanced Reproductive Laboratory Assessment',
-    category: 'Reproductive Medicine & IVF',
-    badge: 'Reproductive Endocrinology',
-    image: '/images/dr-aditya-reproductive-lab.jpg',
-    caption: 'Personalized reproductive endocrinology evaluation and gamete assessment in dedicated fertility laboratory.',
-    outcome: 'Optimized embryo transfer and tailored reproductive treatment protocols.'
-  },
-  {
-    id: 'case-b-lynch-brace',
-    title: 'B-Lynch Compression Suture for Uterine Salvage',
-    category: 'Obstetric Emergencies',
-    badge: 'Uterine Conservation',
-    image: '/images/b-lynch-postpartum-suture.jpg',
-    caption: 'B Lynch suture in a patient with postpartum hemorrhage to save her uterus for next pregnancy.',
-    outcome: 'Successful arrest of haemorrhage and preservation of future fertility.'
   }
 ];
 
@@ -297,16 +280,52 @@ export const fertilityClinicalShowcase = [
   },
   {
     id: 'fertility-ot-specialist',
-    title: 'Specialized Surgical Infertility Care',
+    title: 'For Infertility and IVF: Specialized Operative Care',
     category: 'Reproductive Surgery',
     badge: 'Infertility & IVF Care',
     image: '/images/dr-aditya-ot-delivery.jpg',
     caption: 'Dr. Aditya Nimbkar providing dedicated surgical and operative interventions for complex infertility and assisted reproduction.',
     outcome: 'Comprehensive surgical and reproductive continuum of care.'
+  },
+  {
+    id: 'fertility-reproductive-lab',
+    title: 'Advanced Reproductive Laboratory Assessment',
+    category: 'Reproductive Endocrinology',
+    badge: 'Andrology & Embryology Lab',
+    image: '/images/dr-aditya-reproductive-lab.jpg',
+    caption: 'Personalized reproductive endocrinology evaluation and gamete assessment in dedicated fertility laboratory.',
+    outcome: 'Optimized embryo transfer and tailored reproductive treatment protocols.'
   }
 ];
 
 export const gynaecologyClinicalShowcase = [
+  {
+    id: 'gyn-laparoscopic-hysterectomy-cancer',
+    title: 'Laparoscopic Hysterectomy for Early Endometrial Cancer',
+    category: 'Gynaecological Oncology',
+    badge: '3D Laparoscopic Oncology',
+    image: '/images/laparoscopic-hysterectomy-endometrial-cancer.jpg',
+    caption: 'Laparoscopic Hysterectomy done for a patient with early stage endometrial cancer to avoid progression to advanced stage. Patient had complete recovery.',
+    outcome: 'Successful minimally invasive surgical clearance halting malignancy progression with complete recovery.'
+  },
+  {
+    id: 'gyn-endometrial-cancer-specimen',
+    title: 'Specimen Review & Complete Recovery from Endometrial Cancer',
+    category: 'Gynaecological Oncology',
+    badge: 'Oncological Clearance',
+    image: '/images/endometrial-cancer-specimen-recovery.jpg',
+    caption: 'Laparoscopic Hysterectomy done for a patient with early stage endometrial cancer to avoid progression to advanced stage. Patient had complete recovery.',
+    outcome: 'Complete cancer removal verified by specimen evaluation with excellent post-operative recovery.'
+  },
+  {
+    id: 'gyn-hystero-laparoscopy-cannulation',
+    title: 'Diagnostic Hystero-Laparoscopy with Tubal Cannulation',
+    category: 'Fertility-Preserving Surgery',
+    badge: 'Tubal Cannulation',
+    image: '/images/hystero-laparoscopy-tubal-cannulation.jpg',
+    caption: 'Diagnostic Hystero-laparoscopy with tubal cannulation for blocked fallopian tubes to attempt natural conception and avoid IVF',
+    outcome: 'Tubal patency restored surgically to facilitate natural conception without requiring IVF.'
+  },
   {
     id: 'gyn-prolapse-repair',
     title: 'Sacrospinous Fixation & AP Repair in Recurrent Prolapse',
@@ -351,8 +370,456 @@ export const gynaecologyClinicalShowcase = [
     image: '/images/ruptured-uterine-pregnancy-repair.jpg',
     caption: 'Ruptured uterine pregnancy in 1st trimester being repaired. Patient conceived again successfully after 1 year.',
     outcome: 'Emergency uterine repair preserving fertility; patient successfully conceived again after 1 year.'
+  },
+  {
+    id: 'gyn-hysteroscopy-mas',
+    title: 'Operative Hysteroscopy & Minimal Access Surgery',
+    category: 'Gynaecology & Minimal Access',
+    badge: 'Minimal Access Surgery',
+    image: '/images/dr-aditya-hysteroscopy.jpg',
+    caption: 'Precision endoscopic evaluation and minimal access intra-uterine surgery performed by Dr. Aditya Nimbkar.',
+    outcome: 'Preservation of uterine cavity anatomy with rapid same-day recovery.'
+  },
+  {
+    id: 'gyn-myomectomy-fibroids',
+    title: 'Surgical Myomectomy for Symptomatic Fibroids',
+    category: 'Fertility-Preserving Gynaecology',
+    badge: 'Myomectomy',
+    image: '/images/myomectomy-fibroids.jpg',
+    caption: 'Meticulous removal of uterine fibroids with preservation of uterine wall integrity and reproductive potential.',
+    outcome: 'Relief of pelvic symptoms while safeguarding future childbearing.'
   }
 ];
+
+export const instagramProfile = {
+  handle: '@dradityanimbkar',
+  name: 'Dr. Aditya Nimbkar',
+  profileUrl: 'https://www.instagram.com/dradityanimbkar/',
+  avatar: '/images/dr-aditya-portrait.jpg',
+  specialties: 'Fetal & Reproductive Medicine · High-Risk Obstetrics · Gynaecology',
+  pedigree: 'KEM & LTMMC Alumnus · Teaching Faculty @ Conceptual OBG',
+  cities: 'Thane · Mulund · Kalyan',
+  bio: 'Specialist clinical insights, 3D/4D fetal sonography, reproductive science, complex obstetric surgeries & academic masterclasses.'
+};
+
+export const instagramMediaGallery = [
+  // SECTION 1: Playable Video Lectures & Masterclasses (5 items)
+  {
+    id: 'video-fgr-masterclass',
+    type: 'video',
+    categoryKey: 'videos',
+    title: 'Fetal Growth Restriction (FGR) Simplified',
+    category: 'Fetal Medicine',
+    badge: 'Video Masterclass',
+    duration: 'Clinical Lecture',
+    videoId: '9x66XjQAd4g',
+    thumbnail: 'https://img.youtube.com/vi/9x66XjQAd4g/hqdefault.jpg',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/9x66XjQAd4g?autoplay=1&rel=0',
+    caption: 'Comprehensive masterclass on Fetal Growth Restriction (FGR), umbilical and middle cerebral artery (MCA) Doppler evaluation, and international ISUOG & RCOG management guidelines by Dr. Aditya Nimbkar.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'video-male-infertility',
+    type: 'video',
+    categoryKey: 'videos',
+    title: 'Male Infertility & Semen Analysis Masterclass',
+    category: 'Fertility & IVF',
+    badge: 'IVF Masterclass',
+    duration: 'Clinical Lecture',
+    videoId: 'bEmeGc2fTqM',
+    thumbnail: 'https://img.youtube.com/vi/bEmeGc2fTqM/hqdefault.jpg',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/bEmeGc2fTqM?autoplay=1&rel=0',
+    caption: 'Meticulous semen analysis parameters, sperm morphology correlation, and clinical management strategies from an advanced reproductive & IVF perspective.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'video-fetal-therapy',
+    type: 'video',
+    categoryKey: 'videos',
+    title: 'Fetal Therapy & Intrauterine Interventions',
+    category: 'Fetal Medicine',
+    badge: 'Specialist Lecture',
+    duration: 'Clinical Lecture',
+    videoId: 'x4vnM74X-Oo',
+    thumbnail: 'https://img.youtube.com/vi/x4vnM74X-Oo/hqdefault.jpg',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/x4vnM74X-Oo?autoplay=1&rel=0',
+    caption: 'In-depth clinical insights on fetal arrhythmias, intrauterine medical management, and specialist ultrasound-guided fetal interventions.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'video-obstetric-surgeries',
+    type: 'video',
+    categoryKey: 'videos',
+    title: 'Mastering Obstetric Surgeries & Emergency Procedures',
+    category: 'High-Risk Obstetrics',
+    badge: 'Surgical Masterclass',
+    duration: 'Operative Lecture',
+    videoId: 'A8n1owYTmEE',
+    thumbnail: 'https://img.youtube.com/vi/A8n1owYTmEE/hqdefault.jpg',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/A8n1owYTmEE?autoplay=1&rel=0',
+    caption: 'High-precision surgical techniques for life-threatening obstetric crises, uterine conservation, and complex caesarean section management.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'video-urinary-incontinence',
+    type: 'video',
+    categoryKey: 'videos',
+    title: 'Urinary Incontinence & Pelvic Floor Anatomy',
+    category: 'Gynaecological Surgery',
+    badge: 'Gynaecology Masterclass',
+    duration: 'Clinical Lecture',
+    videoId: 'jEoRye_NRyk',
+    thumbnail: 'https://img.youtube.com/vi/jEoRye_NRyk/hqdefault.jpg',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/jEoRye_NRyk?autoplay=1&rel=0',
+    caption: 'Detailed anatomical breakdown of pelvic floor support, urodynamics interpretation, and surgical prolapse & incontinence reconstruction.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+
+  // SECTION 2: Gynaecological Surgeries & Oncology (7 items)
+  {
+    id: 'gyn-prolapse-repair-post',
+    type: 'photo',
+    categoryKey: 'gynaecology',
+    title: 'Sacrospinous Fixation & AP Repair in 80-Year-Old Patient',
+    category: 'Gynaecological Surgery',
+    badge: 'Pelvic Organ Prolapse',
+    image: '/images/sacrospinous-fixation-prolapse.jpg',
+    caption: 'Correction of prolapse with sacrospinous fixation and AP repair in a 80 year old female with failed previous prolapse surgery',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'gyn-ovarian-cancer-post',
+    type: 'photo',
+    categoryKey: 'gynaecology',
+    title: 'Surgical Resection of Large Ovarian Tumor',
+    category: 'Gynaecological Surgery',
+    badge: 'Gynaecological Oncology',
+    image: '/images/ovarian-cancer-removal.jpg',
+    caption: 'Removal of a large ovarian cancer',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'gyn-fibroid-3kg-post',
+    type: 'photo',
+    categoryKey: 'gynaecology',
+    title: 'Ultrasound Mapping & 3 kg Fibroid Excision',
+    category: 'Gynaecological Surgery',
+    badge: 'Complex Fibroid Surgery',
+    image: '/images/fibroid-mapping-removal.jpg',
+    caption: 'Preoperative fibroid mapping on ultrasound followed by perfect removal of the uterus containing these 3 kg fibroids',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'gyn-embolization-fibroid-post',
+    type: 'photo',
+    categoryKey: 'gynaecology',
+    title: 'Internal Iliac Artery Embolization & Fibroid Removal',
+    category: 'Gynaecological Surgery',
+    badge: 'Bloodless Fibroid Surgery',
+    image: '/images/cancerous-fibroid-embolization.jpg',
+    caption: 'Cancerous fibroid with intestinal adhesions being removed successfully after internal illiac artery embolization to reduce blood loss in surgery. Patient didn\'t require any blood transfusion',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'gyn-ruptured-pregnancy-post',
+    type: 'photo',
+    categoryKey: 'gynaecology',
+    title: '1st Trimester Ruptured Uterine Pregnancy Repair',
+    category: 'Gynaecological Surgery',
+    badge: 'Fertility-Preserving Repair',
+    image: '/images/ruptured-uterine-pregnancy-repair.jpg',
+    caption: 'Ruptured uterine pregnancy in 1st trimester being repaired. Patient conceived again successfully after 1 year.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'gyn-hysteroscopy-mas-post',
+    type: 'photo',
+    categoryKey: 'gynaecology',
+    title: 'Endoscopic Hysteroscopy & Minimal Access Surgery',
+    category: 'Gynaecological Surgery',
+    badge: 'Endoscopic Surgery',
+    image: '/images/dr-aditya-hysteroscopy.jpg',
+    caption: 'Precision endoscopic evaluation and minimal access intra-uterine surgery performed by Dr. Aditya Nimbkar.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'gyn-myomectomy-post',
+    type: 'photo',
+    categoryKey: 'gynaecology',
+    title: 'Uterine Myomectomy for Symptomatic Fibroids',
+    category: 'Gynaecological Surgery',
+    badge: 'Uterine Reconstruction',
+    image: '/images/myomectomy-fibroids.jpg',
+    caption: 'Meticulous removal of uterine fibroids with preservation of uterine wall integrity and reproductive potential.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+
+  {
+    id: 'gyn-laparoscopic-hysterectomy-cancer-post',
+    type: 'photo',
+    categoryKey: 'gynaecology',
+    title: '3D Laparoscopic Hysterectomy for Early Endometrial Cancer',
+    category: 'Gynaecological Oncology',
+    badge: '3D Laparoscopy',
+    image: '/images/laparoscopic-hysterectomy-endometrial-cancer.jpg',
+    caption: 'Laparoscopic Hysterectomy done for a patient with early stage endometrial cancer to avoid progression to advanced stage. Patient had complete recovery.',
+    outcome: 'Curative minimal access resection avoiding disease progression; smooth complete post-operative recovery.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'gyn-endometrial-cancer-specimen-post',
+    type: 'photo',
+    categoryKey: 'gynaecology',
+    title: 'Specimen Review & Complete Recovery from Endometrial Cancer',
+    category: 'Gynaecological Oncology',
+    badge: 'Oncology Recovery',
+    image: '/images/endometrial-cancer-specimen-recovery.jpg',
+    caption: 'Laparoscopic Hysterectomy done for a patient with early stage endometrial cancer to avoid progression to advanced stage. Patient had complete recovery.',
+    outcome: 'Definitive surgical excision of early malignant disease followed by uneventful full recovery.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'gyn-hystero-laparoscopy-cannulation-post',
+    type: 'photo',
+    categoryKey: 'gynaecology',
+    title: 'Diagnostic Hystero-Laparoscopy with Tubal Cannulation',
+    category: 'Gynaecological Surgery',
+    badge: 'Tubal Cannulation',
+    image: '/images/hystero-laparoscopy-tubal-cannulation.jpg',
+    caption: 'Diagnostic Hystero-laparoscopy with tubal cannulation for blocked fallopian tubes to attempt natural conception and avoid IVF',
+    outcome: 'Restoration of tubal patency through cannulation allowing natural conception without IVF.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+
+  // SECTION 3: High-Risk Obstetrics & Critical Emergencies (8 items)
+  {
+    id: 'obs-gestational-diabetes-delivery-post',
+    type: 'photo',
+    categoryKey: 'pregnancy',
+    title: 'Preterm Delivery in Uncontrolled Diabetes Mellitus in Pregnancy',
+    category: 'High-Risk Obstetrics',
+    badge: '★ Featured Milestone',
+    image: '/images/gestational-diabetes-preterm-delivery.jpg',
+    caption: 'A baby delivered in a patient with uncontrolled diabetes Mellitus in pregnancy despite insulin with preterm labour. Mother successfully managed as well after delivery with just oral anti-diabetes medications',
+    outcome: 'Preterm baby safely delivered and healthy; mother successfully managed postpartum with oral anti-diabetes medications alone.',
+    isFeatured: true,
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'obs-b-lynch-post',
+    type: 'photo',
+    categoryKey: 'pregnancy',
+    title: 'B-Lynch Compression Suture for Uterine Salvage',
+    category: 'High-Risk Obstetrics',
+    badge: 'Uterine Conservation',
+    image: '/images/b-lynch-postpartum-suture.jpg',
+    caption: 'B Lynch suture in a patient with postpartum hemorrhage to save her uterus for next pregnancy.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'obs-emergency-ot-post',
+    type: 'photo',
+    categoryKey: 'pregnancy',
+    title: 'Placenta Accreta Spectrum · Salvaging Mother & Twins',
+    category: 'High-Risk Obstetrics',
+    badge: 'Emergency Surgery',
+    image: '/images/dr-aditya-emergency-surgery.jpg',
+    caption: 'Obstetric Hysterectomy done for a woman referred with torrential bleeding in 9th month. 48 instruments, 31 mops, 17 sutures, 7.5 litres blood loss. Mother and twins successfully salvaged!',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'obs-accreta-team-post',
+    type: 'photo',
+    categoryKey: 'pregnancy',
+    title: 'Caesarean Hysterectomy in Placenta Accreta Spectrum',
+    category: 'High-Risk Obstetrics',
+    badge: 'Placenta Accreta Spectrum',
+    image: '/images/caesarean-hysterectomy-accreta.jpg',
+    caption: 'Another caesarean hysterectomy done for a woman with placenta accreta spectrum. Mother stabilized and salvaged.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'obs-emergency-2am-post',
+    type: 'photo',
+    categoryKey: 'pregnancy',
+    title: 'Emergency Caesarean Section at 2 AM',
+    category: 'High-Risk Obstetrics',
+    badge: '24/7 Obstetric Care',
+    image: '/images/emergency-caesarean-2am.jpg',
+    caption: 'Emergency caesarean section at 2 AM - quite a common occurrence in the life of a gynaecologist',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'obs-cervical-cerclage-post',
+    type: 'photo',
+    categoryKey: 'pregnancy',
+    title: 'Cervical Cerclage for Cervical Incompetence',
+    category: 'High-Risk Obstetrics',
+    badge: 'Cervical Cerclage',
+    image: '/images/cervical-cerclage-procedure.jpg',
+    caption: 'Cervical cerclage for a woman with short cervix and multiple abortions - she delivered a healthy 3.2 kg baby successfully later',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'obs-bleeding-previa-post',
+    type: 'photo',
+    categoryKey: 'pregnancy',
+    title: 'Caesarean Section for Bleeding Placenta Previa',
+    category: 'High-Risk Obstetrics',
+    badge: 'Placenta Previa Emergency',
+    image: '/images/placenta-previa-emergency-caesarean.jpg',
+    caption: 'Caesarean section done for a woman with bleeding placenta previa. Mother and baby successfully salvaged',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'obs-uterine-rupture-post',
+    type: 'photo',
+    categoryKey: 'pregnancy',
+    title: 'Delivery in Ruptured Uterus Post-Myomectomy',
+    category: 'High-Risk Obstetrics',
+    badge: 'Uterine Rupture Salvage',
+    image: '/images/uterine-rupture-delivery-surgery.jpg',
+    caption: 'Delivered a baby after a ruptured uterus arrived in a female with history of myomectomy',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'obs-mulund-opd-post',
+    type: 'photo',
+    categoryKey: 'pregnancy',
+    title: 'Early Morning Antenatal OPD at Mulund',
+    category: 'High-Risk Obstetrics',
+    badge: 'Antenatal OPD · Mulund',
+    image: '/images/dr-aditya-mulund-opd.jpg',
+    caption: 'Early morning pregnancy OPD at Mulund at Maher Maternity and Nursing Home.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+
+  // SECTION 4: Fertility, IVF & Reproductive Science (6 items)
+  {
+    id: 'fertility-semen-prep-post',
+    type: 'photo',
+    categoryKey: 'fertility',
+    title: 'Meticulous IUI Semen Sample Preparation',
+    category: 'Fertility & IVF',
+    badge: 'Reproductive Lab',
+    image: '/images/iui-semen-preparation.jpg',
+    caption: 'Preparing IUI semen sample meticulously is very important to ensure the best of sperms are available for insemination and to obtain the best results',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'fertility-natural-iui-post',
+    type: 'photo',
+    categoryKey: 'fertility',
+    title: 'Natural Conception Augmentation with IUI',
+    category: 'Fertility & IVF',
+    badge: 'Gentle Conception Support',
+    image: '/images/iui-natural-conception.jpg',
+    caption: 'IUI is simply an augmentation of something that\'s natural and is one of the easiest and most affordable forms of infertility treatment',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'fertility-hysteroscopy-post',
+    type: 'photo',
+    categoryKey: 'fertility',
+    title: 'Hysteroscopic Diagnosis of Hidden Uterine Problems',
+    category: 'Fertility & IVF',
+    badge: 'Fertility Hysteroscopy',
+    image: '/images/hysteroscopy-fertility-evaluation.jpg',
+    caption: 'Hysteroscopy often helps recognize hidden uterine problems and correct them to help patients conceive even without any further treatment for infertility',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'fertility-ivf-twins-post',
+    type: 'photo',
+    categoryKey: 'fertility',
+    title: 'Successful Delivery of Twins with IVF, PGT-A & ERA',
+    category: 'Fertility & IVF',
+    badge: 'IVF & Genetics Success',
+    image: '/images/ivf-pgta-era-twins-delivery.jpg',
+    caption: 'Successful delivery of twins with IVF, PGT A and ERA. Personalized embryo transfer timing delivering healthy newborn babies.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'fertility-ot-specialist-post',
+    type: 'photo',
+    categoryKey: 'fertility',
+    title: 'For Infertility and IVF: Specialized Operative Care',
+    category: 'Fertility & IVF',
+    badge: 'Infertility & IVF Care',
+    image: '/images/dr-aditya-ot-delivery.jpg',
+    caption: 'Dr. Aditya Nimbkar providing dedicated surgical and operative interventions for complex infertility and assisted reproduction.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'fertility-reproductive-lab-post',
+    type: 'photo',
+    categoryKey: 'fertility',
+    title: 'Advanced Reproductive Laboratory Assessment',
+    category: 'Fertility & IVF',
+    badge: 'Andrology & Embryology Lab',
+    image: '/images/dr-aditya-reproductive-lab.jpg',
+    caption: 'Personalized reproductive endocrinology evaluation and gamete assessment in dedicated fertility laboratory.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+
+  // SECTION 5: Fetal Medicine & 3D Sonography (5 items)
+  {
+    id: 'fetal-3d-face-post',
+    type: 'photo',
+    categoryKey: 'fetal',
+    title: '3D Fetal Facial Profiling in 3rd Trimester',
+    category: 'Fetal Medicine',
+    badge: '3D Imaging · Kalyan',
+    image: '/images/fetal-3d-face-kalyan.jpg',
+    caption: '3D imaging of face in 3rd trimester to look for proper development of facial features and to ensure parents get their first sighting of their baby',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'fetal-3d-twins-post',
+    type: 'photo',
+    categoryKey: 'fetal',
+    title: 'High-Definition 3D Fetal Twin Ultrasound',
+    category: 'Fetal Medicine',
+    badge: 'HD Sonography · Kalyan',
+    image: '/images/fetal-3d-twins-kalyan.jpg',
+    caption: '3D imaging of the baby has unparalleled aesthetic value and is also an ecstatic moment for parents',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'fetal-scan-live-post',
+    type: 'photo',
+    categoryKey: 'fetal',
+    title: 'Advanced Fetal Anomaly Ultrasound Scan',
+    category: 'Fetal Medicine',
+    badge: 'Fetal Anomaly Scan',
+    image: '/images/dr-aditya-fetal-scan-kalyan.jpg',
+    caption: 'Dr. Aditya Nimbkar performing an advanced fetal anomaly ultrasound scan at Alfi Diagnostics & Smart Clinics, Kalyan.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'fetal-workstation-post',
+    type: 'photo',
+    categoryKey: 'fetal',
+    title: 'Fetal Medicine Workstation & Reporting',
+    category: 'Fetal Medicine',
+    badge: 'Ultrasound Workstation',
+    image: '/images/dr-aditya-fetal-kalyan.jpg',
+    caption: 'Multi-parametric scan evaluation and clinical reporting performed personally by Dr. Aditya Nimbkar at Alfi Diagnostics, Kalyan.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  },
+  {
+    id: 'fetal-procedure-thane-post',
+    type: 'photo',
+    categoryKey: 'fetal',
+    title: 'Specialised Fetal Consultation & Procedures at Thane',
+    category: 'Fetal Medicine',
+    badge: 'Thane Facility',
+    image: '/images/dr-aditya-fetal-thane.jpg',
+    caption: 'Specialized fetal medicine consultation, prenatal counseling and invasive diagnostic procedures at Ova Fertility & Tieten Medicity, Thane.',
+    instagramUrl: 'https://www.instagram.com/dradityanimbkar/'
+  }
+];
+
 
 
 

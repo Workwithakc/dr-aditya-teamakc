@@ -95,3 +95,8 @@ audit_screenshots/
 
 .vercel
 .env*
+
+visual_audit_shots/
+take_visual_audit_screenshots.mjs
+inspect_coords.mjs
+other docs/

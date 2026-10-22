@@ -12,13 +12,14 @@ import Stories from './pages/Stories';
 import Resources from './pages/Resources';
 import Locations from './pages/Locations';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 import { services } from './data/practice';
 import Preloader from './components/Preloader';
 import PageTransition from './components/PageTransition';
 import './App.css';
 import './pages.css';
 
-const pageTitles = { '/': 'Fetal Medicine, Fertility & Pregnancy Care', '/about': 'Meet Your Doctor', '/patient-stories': 'Patient Experiences', '/resources': 'Patient Resources & FAQs', '/locations': 'Locations in Thane, Mulund & Kalyan', '/contact': 'Contact & Appointment Enquiries', ...Object.fromEntries(services.map(s => [`/${s.id}`, `${s.title} in Thane, Mulund & Kalyan`])) };
+const pageTitles = { '/': 'Fetal Medicine, Fertility & Pregnancy Care', '/about': 'Meet Your Doctor', '/gallery': 'Clinical Gallery & Surgical Cases', '/patient-stories': 'Patient Experiences', '/resources': 'Patient Resources & FAQs', '/locations': 'Locations in Thane, Mulund & Kalyan', '/contact': 'Contact & Appointment Enquiries', ...Object.fromEntries(services.map(s => [`/${s.id}`, `${s.title} in Thane, Mulund & Kalyan`])) };
 function Site() {
   const { pathname } = useLocation();
   const reduced = useReducedMotion();
@@ -42,6 +43,7 @@ function Site() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
           {services.map(s => <Route key={s.id} path={`/${s.id}`} element={<Service serviceId={s.id} />} />)}
           <Route path="/patient-stories" element={<Stories />} />
           <Route path="/resources" element={<Resources />} />

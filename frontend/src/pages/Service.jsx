@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import { ArrowUpRight, Check, ShieldCheck, Plus, MapPin, Activity, Stethoscope } from 'lucide-react';
+import { ArrowUpRight, Check, ShieldCheck, Plus, MapPin, Activity, Stethoscope, Sparkles } from 'lucide-react';
 import { PageIntro, Reveal, Chapter, FaqList, CareIcon } from '../components/Shared';
 import { BookButton } from '../components/Appointment';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '../components/ui/dialog';
@@ -229,16 +229,22 @@ export default function Service({ serviceId }) {
             </Reveal>
 
             <div className="clinical-cases-grid">
-              {clinicalCasesGallery.filter(c => c.category !== 'Reproductive Medicine & IVF').map((c, i) => (
+              {clinicalCasesGallery.map((c, i) => (
                 <Reveal key={c.id} delay={i * 0.08} className="clinical-case-card-wrapper">
                   <div
-                    className="clinical-case-card"
+                    className={`clinical-case-card ${c.isFeatured ? 'featured-case' : ''}`}
                     onClick={() => setSelectedPhoto(c)}
                     role="button"
                     tabIndex={0}
                     onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedPhoto(c); } }}
                     data-testid={`case-${c.id}`}
                   >
+                    {c.isFeatured && (
+                      <div className="clinical-featured-banner" data-testid="clinical-featured-banner">
+                        <Sparkles size={11} />
+                        <span>Featured Milestone Case</span>
+                      </div>
+                    )}
                     <div className="clinical-case-media">
                       <img src={c.image} alt={c.title} loading="lazy" />
                       <span className="clinical-case-badge">{c.badge}</span>

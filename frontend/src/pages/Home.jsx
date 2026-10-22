@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion
 import { ArrowDown, ArrowUpRight, Check, MessageCircle } from 'lucide-react';
 import { BookButton } from '../components/Appointment';
 import { Starburst } from '../components/Shared';
-import { EvidenceStrip, CareSection, DoctorSection, JourneySection, StoriesPreview, FaqPreview, LocationsPreview } from '../components/HomeSections';
+import { EvidenceStrip, CareSection, DoctorSection, JourneySection, ClinicalMediaPreview, StoriesPreview, FaqPreview, LocationsPreview } from '../components/HomeSections';
 import { contact, images } from '../data/practice';
 
 const Hero = () => {
@@ -23,7 +23,6 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           <div className="hero-arch-container">
-            <div className="hero-arch-outline" />
             <div className="hero-photo hero-photo-doctor">
               <motion.img
                 src={images.doctor}
@@ -136,6 +135,7 @@ export default function Home() {
       <CareSection />
       <DoctorSection />
       <JourneySection />
+      <ClinicalMediaPreview />
       <StoriesPreview />
       <FaqPreview />
       <LocationsPreview />
